@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetdejava.Creditcontroller">
+   <children>
+      <Label layoutX="150.0" layoutY="30.0" prefHeight="35.0" prefWidth="439.0" text="Bienvenue Chez Les Crédits" textFill="#2387cc">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+         </font>
+      </Label>
+      <Pane layoutX="4.0" layoutY="94.0" prefHeight="212.0" prefWidth="291.0" style="-fx-background-color: #2387cc;">
+         <children>
+            <Label layoutX="13.0" layoutY="75.0" text="Client">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="109.0" text="Produits">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="142.0" text="Quantité">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtName" layoutX="122.0" layoutY="73.0" prefHeight="25.0" prefWidth="159.0" />
+            <TextField fx:id="txtPrenom" layoutX="122.0" layoutY="140.0" prefHeight="25.0" prefWidth="159.0" />
+            <TextField fx:id="txtMobile" layoutX="122.0" layoutY="107.0" prefHeight="25.0" prefWidth="159.0" />
+            <Label layoutX="13.0" layoutY="176.0" text="Prix total">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPrix" layoutX="122.0" layoutY="175.0" prefHeight="25.0" prefWidth="159.0" />
+            <TextField fx:id="txt_search" layoutX="64.0" layoutY="29.0" promptText="Chercher" />
+            <ImageView fitHeight="16.0" fitWidth="17.0" layoutX="193.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/rechercher.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="309.0" layoutY="94.0" prefHeight="212.0" prefWidth="291.0">
+        <columns>
+          <TableColumn fx:id="IDColmn" prefWidth="55.0" text="ID crédit" />
+          <TableColumn fx:id="NameColmn" prefWidth="62.0" text="Client" />
+            <TableColumn fx:id="PrenomColmn" prefWidth="59.0" text="Quantité" />
+            <TableColumn fx:id="MobileColmn" prefWidth="57.0" text="Produits" />
+            <TableColumn fx:id="PrixColmn" prefWidth="75.0" text="Prix crédit" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAdd" layoutX="14.0" layoutY="329.0" mnemonicParsing="false" onAction="#Add" style="-fx-background-color: green;" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="103.0" layoutY="329.0" mnemonicParsing="false" onAction="#Update" style="-fx-background-color: #2387cc;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="198.0" layoutY="329.0" mnemonicParsing="false" onAction="#Delete" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="64.0" fitWidth="96.0" layoutX="82.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/credit1.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="logout" layoutX="370.0" layoutY="327.0" mnemonicParsing="false" onAction="#userLogOut" style="-fx-background-color: #2387ff;" text="Retour" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancel" layoutX="462.0" layoutY="327.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="35.0" prefWidth="124.0" style="-fx-background-color: red;" text="Déconnexion" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="wrongLogIn" layoutX="170.0" layoutY="65.0" prefHeight="17.0" prefWidth="326.0" textFill="#ff2908">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
